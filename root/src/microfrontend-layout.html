@@ -1,43 +1,22 @@
 <single-spa-router>
-  <!--
-
-    This is the single-spa Layout Definition for your microfrontends.
-    See https://single-spa.js.org/docs/layout-definition/ for more information.
-
-  -->
-
-  <!-- Example layouts you might find helpful:
-
-  <nav>
-    <application name="@org/navbar"></application>
-  </nav>
-  <route path="settings">
-    <application name="@org/settings"></application>
-  </route>
-
-  -->
-
   <main>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Single Spa</a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-2">
+      <a class="navbar-brand" href="/" onclick="singleSpaNavigate(event)">Single Spa</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="#">Manage Task</a>
+          <a id="home" class="nav-item nav-link" href="/" onclick="singleSpaNavigate(event)">Home <span class="sr-only"></span></a>
+          <a id="tasks" class="nav-item nav-link" href="/angular" onclick="singleSpaNavigate(event)">Tasks</a>
         </div>
       </div>
     </nav>
     <route default>
-      <application name="@single-spa/welcome"></application>
+      <application name="@tirocinio/react"></application>
     </route>
     <route path="angular">
       <application name="@tirocinio/angular"></application>
-    </route>
-    <route path="react">
-      <application name="@tirocinio/react"></application>
     </route>
   </main>
 </single-spa-router>
