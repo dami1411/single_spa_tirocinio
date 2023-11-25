@@ -1,3 +1,17 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+build/
+dist/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.cache/
+.project
+.classpath
+
 # Logs
 logs
 *.log

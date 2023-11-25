@@ -1,0 +1,9 @@
+{
+  "imports": {
+    "@tirocinio/root": "//localhost:9000/tirocinio-root-config.js",
+    "@tirocinio/style": "//localhost:8080/tirocinio-style.js",
+    "@tirocinio/angular": "//localhost:4201/main.js",
+    "@tirocinio/react": "//localhost:4202/tirocinio-react.js",
+    "@single-spa/welcome": "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
+  }
+}

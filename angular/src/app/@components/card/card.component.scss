@@ -1,0 +1,22 @@
+.example-card {
+    max-width: 400px;
+    margin: auto;
+    margin: 1rem;
+  }
+  
+  .example-header-image {
+    
+    &.high {
+        background-color: red;
+    }    
+    &.medium {
+        background-color: orange;
+    }    
+    &.low {
+        background-color: green;
+    }
+    .marked{
+        text-decoration-line:line-through ;
+    }    
+  }
+  

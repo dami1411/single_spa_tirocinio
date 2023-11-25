@@ -1,0 +1,33 @@
+<div class="container mt-3" style="height: 500px;">
+    <div class="row">
+        <div class="col-6"><h2>To Do</h2></div>
+        <div class="col-6"><h2>Done</h2></div>
+    </div>
+    
+  <div class="row" style="height: 60%;">
+    <div class="col-6">
+      <h2 *ngIf="!todoTask.length" class="mt-5">nothing todo...</h2>
+      <app-card *ngFor="let task of obs|async" [options]="task" (optionsChange)="setStatus($event)"> </app-card>
+        
+    </div>
+    
+    <div class="col-6">
+      <h2 *ngIf="!doneTask.length" class="mt-5">make something!</h2>
+      <app-card *ngFor="let task of obsDone|async" [options]="task" (optionsChange)="setStatus($event)"> </app-card>
+    </div>
+
+  </div>
+  <div class="row">
+    <div class="col-6">
+      <mat-paginator #firstPaginator [pageSizeOptions]="[1]">
+
+      </mat-paginator>
+    </div>
+    <div class="col-6">
+      <mat-paginator #secondPaginator [pageSizeOptions]="[1]">
+
+      </mat-paginator>
+    </div>
+  </div>
+  
+</div>

@@ -1,0 +1,46 @@
+{
+  "production": true,
+  "_iam": {
+    "session": "localStorage",
+    "cookie_name": "iam.tokens.app",
+    "iam_page": "https://cmp-sspa-dev.westeurope.cloudapp.azure.com/iamfe/login",
+    "server": "https://cmp-kong-dev3.westeurope.cloudapp.azure.com/iam",
+    "app_to_use": "CMP_APP",
+    "login_redirect": "auto",
+    "global_provider": true
+  },
+  "iam": {
+    "iam_page": "https://cmp-kong-dev3.westeurope.cloudapp.azure.com",
+    "app_to_use": "CMP_APP",
+    "login_redirect": "https://cmp-sspa-dev3.westeurope.cloudapp.azure.com/dashboard",
+    "global_provider": true,
+    "auth_type": "KEYCLOAK",
+    "session": "localStorage",
+    "cookie_name": "iam.tokens.app",
+    "server": "https://cmp-kong-dev3.westeurope.cloudapp.azure.com/iam",
+    "endpoint": "https://cmp-kong-dev3.westeurope.cloudapp.azure.com/auth/realms/kcDev01/protocol/openid-connect",
+    "client_id": "iam_client",
+    "realm": "kcDev01",
+    "query_params": {
+      "response_type": "code",
+      "redirect_uri": "https://cmp-sspa-dev3.westeurope.cloudapp.azure.com/dashboard"
+    },
+    "request": {
+      "code": "",
+      "grant_type": "authorization_code",
+      "client_secret": "h1mFguRqmCLr6PIbED1SmE4q6Iv9JwyI",
+      "redirect_uri": ""
+    }
+  },
+  "lang": {
+    "_languages": {
+      "en": "English",
+      "it": "Italiano"
+    },
+    "default": "it"
+  },
+  "useDarkMode": true,
+  "useVirtualAssistant": true,
+  "usePwa": false,
+  "useMultitenant": true
+}
