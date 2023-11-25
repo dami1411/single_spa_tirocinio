@@ -6,7 +6,8 @@
         'medium': options.severity === 2,
         'low': options.severity === 1
       }"></div>
-      <mat-card-title *ngIf="options.title">{{options.title}}</mat-card-title>
+      <mat-card-title *ngIf="options.title && options.status === 'done'">{{options.title}}✅</mat-card-title>
+      <mat-card-title *ngIf="options.title && options.status !== 'done'">{{options.title}}</mat-card-title>
       <mat-card-subtitle *ngIf="options.to">{{options.to}}</mat-card-subtitle>
     </mat-card-header>
     <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
@@ -20,3 +21,5 @@
       <button mat-button *ngIf="options.status && options.status == 'done'" (click)="setToToDo()">Move to TODO</button>
     </mat-card-actions>
   </mat-card>
+  
+  

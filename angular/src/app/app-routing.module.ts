@@ -2,7 +2,7 @@ import { APP_BASE_HREF, LocationStrategy, PathLocationStrategy } from '@angular/
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { EmptyRouteComponent } from './@pages/empty-route/empty-route.component';
- 
+
 const routes: Routes = [
   {
     path: '', children: [
