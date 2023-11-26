@@ -6,6 +6,9 @@ import { MatButtonModule } from '@angular/material/button'
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table'
 import {MatIconModule} from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+
 
 const COMPONENTS = [
   CardComponent
@@ -22,7 +25,9 @@ const COMPONENTS = [
     MatPaginatorModule,
     MatPaginatorModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   exports: [
     COMPONENTS

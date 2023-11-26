@@ -6,10 +6,11 @@ import { MatTableDataSource } from '@angular/material/table';
 import { Observable, tap } from 'rxjs';
 import { CardComponent } from 'src/app/@components/card/card.component';
 
+
 const getAllTasks = () => {
   return JSON.parse(localStorage.getItem('tasks') || '[]');
 }
-
+  
 const saveTask = (task: any) => {
   try {
     const tasks = getAllTasks();
@@ -44,6 +45,7 @@ export class HomeComponent implements OnInit {
   setStatus(task: any) {
     const index = this.tasks.findIndex(f => f.id === task.id);
     this.tasks[index].status = task.status;
+    
     localStorage.setItem('tasks', JSON.stringify(this.tasks));
 
     this.doneTask = this.tasks.filter(f => f.status.toLowerCase() === 'done');

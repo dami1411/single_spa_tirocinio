@@ -7,7 +7,7 @@ import { ComponentModule } from 'src/app/@components/component.module';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-
+import {MatInputModule} from '@angular/material/input';
 @NgModule({
   declarations: [
     HomeComponent
@@ -18,7 +18,8 @@ import { MatIconModule } from '@angular/material/icon';
     ComponentModule,
     MatPaginatorModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    MatInputModule
   ]
 })
 export class HomeModule { }

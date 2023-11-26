@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
+import * as moment from 'moment';
 
 interface ITask {
   to: string;
@@ -6,6 +7,8 @@ interface ITask {
   severity: number;
   title: string;
   description: string;
+  created:string;  
+  finished:string;
 }
 
 @Component({
@@ -16,10 +19,14 @@ interface ITask {
 export class CardComponent implements OnInit {
   @Input() options: ITask = {} as any;
   @Output() optionsChange: EventEmitter<any> = new EventEmitter();
-  constructor() {}
+  
+  constructor() {
+    
+  }
 
   setToDone() {
     this.options.status = 'done';
+    this.options.finished = moment().format('YYYY-MM-DDTHH:mm');
     this.optionsChange?.emit(this.options);    
   }
 
@@ -28,5 +35,7 @@ export class CardComponent implements OnInit {
     this.optionsChange?.emit(this.options);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.options.created = moment(this.options.created).format('YYYY-MM-DDTHH:mm');
+  }
 }
