@@ -6,15 +6,30 @@
         'medium': options.severity === 2,
         'low': options.severity === 1
       }"></div>
-      <mat-card-title *ngIf="options.title && options.status === 'done'">{{options.title}}✅</mat-card-title>
+      <mat-card-title *ngIf="options.title && options.status === 'done'">{{options.title}} <span><mat-icon class="text-success my-1">done</mat-icon></span></mat-card-title>
       <mat-card-title *ngIf="options.title && options.status !== 'done'">{{options.title}}</mat-card-title>
       <mat-card-subtitle *ngIf="options.to">{{options.to}}</mat-card-subtitle>
     </mat-card-header>
     <!-- <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu"> -->
     <mat-card-content>
+      <div>
       <p>
         {{options.description}}
+       
       </p>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <mat-form-field>
+          <input matInput placeholder="created" type="datetime-local" readonly [value]="options.created">
+          </mat-form-field>
+        </div>
+        <div class="col-6" *ngIf="options.status === 'done'">
+        <mat-form-field>
+          <input matInput placeholder="done" type="datetime-local" readonly [value]="options.finished">
+        </mat-form-field>  
+        </div>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-button *ngIf="options.status && options.status != 'done'" (click)="setToDone()">Move to DONE</button>
@@ -22,4 +37,5 @@
     </mat-card-actions>
   </mat-card>
   
+ 
   

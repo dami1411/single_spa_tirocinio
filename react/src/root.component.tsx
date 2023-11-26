@@ -128,6 +128,7 @@ return (
           <p className="text-danger">{errors.description?.message}</p>
           </div>
           <button type='submit' className='btn btn-primary' onClick={ handleErrorTo }>publish</button>
+          <button className='btn btn-danger' type='button' onClick={() => {reset(); setChoice('');}}>reset</button>
         </form>
       </div>
       <div className="col-2"></div>
